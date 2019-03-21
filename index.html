@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<div class="w3-content w3-display-container" style="max-width:800px">
+<div class="w3-container">
+ <h2 align= "center">Зимова школа</h2>
+</div>
+  <img class="mySlides" src="D:\38\Ткач Пікун\Нова папка\images (1).jpg" style="width:100%">
+  <img class="mySlides" src="D:\38\Ткач Пікун\Нова папка\images (2).jpg" style="width:100%">
+  <img class="mySlides" src="D:\38\Ткач Пікун\Нова папка\images.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+<p align= "center"> <b>ПРО ЗИМОВУ ШКОЛУ ПРОГРАМУВАННЯ</b></p>
+<p>Волинський коледж Національного університету харчових технологій запрошує учнів 9-11 класів, учнів професійно-технічних училищ та студентів коледжів м. Луцьк взяти участь в II Зимовій школі програмування.
+
+УВАГА! Реєстрація на курси почнеться 21 грудня і триватиме до 31 грудня 2018 р.
+
+Мета школи - надати школярам, учням та студентам можливіть проявити свою майстерність у мистецтві розробки алгоритмів та складанні програм мовами високого рівня, підвищити рівнь знань з предметів, які передбачають програмування та алгоритмізацію.
+
+Початок занять - 2 січня 2019 року. Тривалість занять - 3 тижні: 9 занять по 2 години в день. Місце проведення Зимової школи - мультимедiйні навчальні класи та комп'ютерні лабораторії Волинського коледжу НУХТ. Заняття проводяться в трьох секціях.</p>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+<h2 class="w3-center">Програма курсів</h2>
+<div class="w3-container">
+
+<button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align">Секція "кодування Android"</button>
+<div id="Demo1" class="w3-hide w3-container">
+    <p>У секцію "Кодування Android" запрошують учнів 9-11 класів, що немають попереднього досвіду програмування, але мають власний смартфон на платформі Android і бажають навчитися створювати мобільні додатки. Основне завдання секції ознайомити учасників школи з елементами інтерфейсу середовища MIT App Inventor; сформувати поняття проекту та його складових, навички роботи з елементами інтерфейсу; алгоритм створення, тестування, збереження, публікації та встановлення додатку проекту на смартфон. Наприкінці навчання планується проведення WEB-квесту, результати якого будуть враховуватися при формуванні груп на наступні роки навчання.</p>
+</div>
+
+<button onclick="myFunction('Demo2')" class="w3-button w3-block w3-black w3-left-align">Секція "Олімпійський резерв" </button>
+<div id="Demo2" class="w3-hide w3-container">
+    <p>Секція "Олімпійський резер" запрошує учнів та студентів, що мають базові знання мови програмування С++ (структуру програми та базові керуючі конструкції). Основне завдання секції підготовка до участі у міжнародній олімпіаді з програмування «The ACM-ICPC International Collegiate Programming Contest», що проводяться під егідою Асоціації обчислювальної техніки (ACM) за участі університета Бейлора (https://icpc.baylor.edu). Заняття проводять студенти фіналісти Всекураїнської олімпіади з програмування та випускники - учасники Міжнародної олімпіади. Наприкінці навчання проводиться олімпіада зимової школи. Фіналісти отримують сертифікати, що дозволяють отримати додаткові бали на екзамен.</p>
+</div>
+
+<button onclick="myFunction('Demo3')" class="w3-button w3-block w3-black w3-left-align">Секція "Основи Web - дизайну"</button>
+<div id="Demo3" class="w3-hide w3-container">
+    <p>Секція "Основи Web-дизайну" запрошує учнів та студентів, що бажають створити власний сайт. Основне завдання секції надати базові знання із основ web-розробки, зокрема курс покриватиме такі теми як перші кроки по запуску сайту, DNS та хостінг, HTML-CSS та JavaScript. 
+Курс проводиться за підтримки фонду BrainBasket (https://brainbasket.org/). Навчальна програма базуються на курсах провідних навчальних закладів світу та визнаних відкритих освітніх ресурсів, зокрема University of London, Microsoft, W3Schools, Mozilla MDN web docs та ін. 
+Заняття в рамках проекту проходитимуть у форматі змішаного навчання (онлайн+офлайн), що передбачає самостійну роботу з лекційним матеріалом, який доступний онлайн, і аудиторну роботу під керівництвом менторів на базі Зимової школи.</p>
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-black", "w3-red");
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace("w3-red", "w3-black");
+  }
+}
+</script>
+
+<div class="w3-row-padding">
+
+<div class="w3-third w3-margin-bottom">
+  <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+    
+    <div class="w3-card-4 w3-dark-grey" style="width:auto">
+
+    <div class="w3-container w3-center">
+      <h3>Олімпійський резерв
+</h3>
+      <img src= <img class="D:\38\Ткач Пікун\Нова папка\images (1).jpg" style="width:100%"> <alt="Avatar" style="width:80%">
+      <h5>Зареєструватися</h5>
+
+      
+    </div>
+
+  </div>
+    <li class="w3-light-grey w3-padding-24">
+      <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+    </li>
+  </ul>
+</div>
+
+<div class="w3-third w3-margin-bottom">
+  
+  <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+  
+   <div class="w3-card-4 w3-dark-grey" style="width:auto">
+
+    <div class="w3-container w3-center">
+      <h3>Friend Request</h3>
+      <img src= <img class="mySlides" src="D:\38\Ткач Пікун\Нова папка\images (1).jpg" style="width:100%"><alt="Avatar" style="width:80%">
+     
+
+      
+    
+    </li>
+    <li class="w3-light-grey w3-padding-24">
+      <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+    </li>
+  </ul>
+</div>
+
+<div class="w3-third w3-margin-bottom">
+  <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+    <div class="w3-card-4 w3-dark-grey" style="width:auto">
+
+    <div class="w3-container w3-center">
+      <h3>Friend Request</h3>
+      <img src=<img class="mySlides" src="D:\38\Ткач Пікун\Нова папка\images (1).jpg" style="width:100%">< alt="Avatar" style="width:80%">
+    
+
+      
+    </li>
+    <li class="w3-light-grey w3-padding-24">
+      <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+    </li>
+  </ul>
+</div>
+<div class="w3-quarter">
+      <img src="
+
+" alt="Sandwich" style="width:100%">
+      <h3>Наші досягнення</h3>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <img src="D:\38\Ткач Пікун\Нова папка\images (2).jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>2017 Фінал Всеукраїнської олімпіади</b></h4>
+      <p>Детальніше</p>
+    </div>
+  </div>
+  <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>2018 Обласний етап Всеукраїнської олімпіади</h3>
+      <p>Детальніше</p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+</body>
+</html> 
+
+
